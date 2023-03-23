@@ -107,7 +107,7 @@ h2 {
 #my-skills ul {
 	align-items: center;
 	display: inline-flex;
-	flex-direction: column;
+	justify-content: center;
 	margin: 0;
 	padding: 0;
 	width: 50%;
