@@ -12,6 +12,7 @@ nav {
 	overflow: hidden;
 	position: sticky;
 	top: 0;
+	/* padding-top: 7px; */
 }
 
 nav ul {
@@ -41,13 +42,19 @@ nav li a:hover {
 
 #about-me {
 	align-items: center;
-	border: 2px solid black;
+	border-bottom: 2px solid black;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	margin: 0;
 	padding: 0;
 	width: 100%;
+}
+#about-me img {
+	border: 2px solid black;
+	height: 350px;
+	margin: 25px;
+	width: 350px;
 }
 
 #about-me .container {
@@ -57,12 +64,7 @@ nav li a:hover {
 	width: 100%;
 }
 
-#about-me img {
-	border: 2px solid black;
-	height: 350px;
-	margin: 25px;
-	width: 350px;
-}
+
 
 .grid-container {
 	align-self: center;
@@ -73,6 +75,7 @@ nav li a:hover {
 }
 
 .grid-item {
+	color: black;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -126,4 +129,21 @@ section {
 	flex-direction: column;
 	padding: 20px;
 	text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+	#about-me {
+		flex-direction: column-reverse;
+	}
+	#about-me img {
+		height: 200px;
+		width: 200px;
+	}
+	.grid-container {
+		align-self: center;
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: repeat(2, 1fr);
+		width: 90%;
+	}
 }
